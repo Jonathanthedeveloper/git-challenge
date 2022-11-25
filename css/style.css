@@ -72,6 +72,31 @@ body {
   border: 0.3rem solid yellow;
 }
 
+
+/* Added social media icons */
+
+.media_icons{
+  display: flex;
+  
+}
+
+.fa{
+  padding: 10px;
+  font-size: 50px;
+  width: 25px;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.5;
+}
+
+.fa-facebook, .fa-twitter, .fa-linkedin {
+  color: rgba(243, 233, 233, 0.767);
+}
+
+/* End of social media icons */
+
 .profile__name {
   font-size: 4rem;
   color: white;
