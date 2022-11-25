@@ -57,9 +57,9 @@ body {
 
 .profile {
   background-color: var(--purple-dark);
-  box-shadow: 0 1rem 4rem var(--black);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 1rem 1rem 4rem var(--black);
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
   margin: 3rem 0;
   padding: 3rem;
   max-width: 28rem;
@@ -70,19 +70,18 @@ body {
   text-align: center;
   animation: slideUp 2s backwards;
   backface-visibility: hidden;
-  transition: all .5s;
+  transition: all 0.5s;
   transform: scale(1);
 }
 
-
 /* intro slide up animation */
 @keyframes slideUp {
-  0%{
+  0% {
     transform: translateY(2rem);
     opacity: 0;
   }
 
-  100%{
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
@@ -90,10 +89,8 @@ body {
 
 /* hover effect of profile cards */
 .profile:hover {
-  transform: translateY(-.5rem) scale(1.02);
+  transform: translateY(-0.5rem) scale(1.02);
 }
-
-
 
 .profile > *:not(:last-child) {
   margin-bottom: 2.5rem;
@@ -128,6 +125,28 @@ body {
   padding: 1rem;
   border-radius: 10px;
   text-decoration: none;
+  position: relative;
+}
+
+.profile__link::after {
+  content: "";
+  display: inline-block;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  z-index: -1;
+  transition: all 0.5s;
+  border-radius: inherit;
+}
+
+/* button animation */
+.profile__link:hover::after {
+  transform: scaleX(2) scaleY(2);
+  opacity: 0;
 }
 
 /*  social media icons */
