@@ -95,10 +95,19 @@ body {
   text-decoration: none;
   
 }
-.profile__link:link {
+.profile_link:hover {
+  margin: 2rem;
+  color: white;
+  background-color: rgb(102, 97, 237);
+  border: 0.2rem solid yellow;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.profile_link:link {
   
 }
 
-.profile__link:visited {
+.profile_link:visited {
   
 }
