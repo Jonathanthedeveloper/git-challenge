@@ -56,6 +56,15 @@ body {
 }
 
 .profile {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(37,35,92);
+  box-shadow: 0 4px 30px rgba(234, 209, 62, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
   background-color: var(--purple-dark);
   box-shadow: 1rem 1rem 4rem var(--black);
   /* backdrop-filter: blur(10px); */
@@ -74,6 +83,16 @@ body {
   transform: scale(1);
 }
 
+.profile__image {
+  margin: 2rem;
+  height: 8rem;
+  border-radius: 50%;
+  outline: 0.2rem solid var(--yellow);
+  outline-offset: 0.3rem;
+}
+
+
+/* Added social media icons */
 /* intro slide up animation */
 @keyframes slideUp {
   0% {
@@ -96,6 +115,14 @@ body {
   margin-bottom: 2.5rem;
 }
 
+
+.fa-facebook, .fa-twitter, .fa-linkedin {
+  color: rgba(243, 233, 233, 0.767);
+}
+
+/* End of social media icons */
+
+
 .profile__image {
   height: 8rem;
   border-radius: 50%;
@@ -106,6 +133,7 @@ body {
 }
 
 .profile__name {
+  color:#e96d07;
   font-size: 2rem;
 }
 
@@ -161,8 +189,44 @@ body {
   text-decoration: none;
 }
 
+.profile_link:hover {
+  margin: 2rem;
+  color: white;
+  background-color: rgb(102, 97, 237);
+  border: 0.2rem solid yellow;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+
 .media_icons > *:hover {
   opacity: 0.5;
 }
 
 /* End of social media icons */
+
+
+
+#Kizito-Chinazo{
+  background-color: var(--white);
+}
+#Kizito-Chinazo .profile__name{
+  color: black;
+}
+#Kizito-Chinazo .profile__info{
+  color: var(--purple-light);
+}
+#Kizito-Chinazo .profile__bio{
+  color: var(--purple-dark);
+}
+#Kizito-Chinazo .profile__link{
+  background-color: var(--purple-dark);
+}
+#Kizito-Chinazo .media_icons > * {
+  color: var(--purple-dark);
+}
+#Kizito-Chinazo .profile__image{
+  background-color: var(--purple-dark);
+}
+
