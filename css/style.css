@@ -9,7 +9,7 @@
   --orange: rgb(255, 80, 48);
   --pink: rgb(221, 37, 117);
   --white: rgb(255, 255, 255);
-  --black: rgb(0, 0, 0;);
+  --black: rgb(0, 0, 0);
 }
 
 /* resets default browser styles */
@@ -44,6 +44,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* full container */
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -55,6 +56,9 @@ body {
   margin: 0 auto;
 }
 
+
+
+
 .profile {
 
   display: flex;
@@ -64,9 +68,9 @@ body {
   box-shadow: 0 4px 30px rgba(234, 209, 62, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
+  
   background-color: var(--purple-dark);
-  box-shadow: 1rem 1rem 4rem var(--black);
+  /* box-shadow: 1rem 1rem 4rem var(--black); */
   /* backdrop-filter: blur(10px); */
   /* -webkit-backdrop-filter: blur(10px); */
   margin: 3rem 0;
@@ -99,7 +103,7 @@ body {
     transform: translateY(2rem);
     opacity: 0;
   }
-
+  
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -120,7 +124,6 @@ body {
   color: rgba(243, 233, 233, 0.767);
 }
 
-/* End of social media icons */
 
 
 .profile__image {
@@ -208,7 +211,7 @@ body {
 
 
 
-#Kizito-Chinazo{
+/* #Kizito-Chinazo{
   background-color: var(--white);
 }
 #Kizito-Chinazo .profile__name{
@@ -228,5 +231,48 @@ body {
 }
 #Kizito-Chinazo .profile__image{
   background-color: var(--purple-dark);
+} */
+
+
+
+/* theme toggle functionality */
+
+.theme__toggle--button {
+  height: 3rem;
+  width: 3rem;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+  z-index: 2;
+
 }
+
+
+.theme__toggle--checkbox {
+  display: none;
+}
+
+.theme__toggle--checkbox:checked + .theme__toggle--button  {
+  background-color: var(--purple-dark);
+}
+
+.theme__toggle--checkbox:checked ~ .profile{
+  background-color:  var(--white);
+  color: var(--purple-dark);
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
+}
+
+.theme__toggle--checkbox:checked  ~ .profile .profile__name{
+  color: black;
+}
+
+
+.theme__toggle--checkbox:checked ~ .profile > .media_icons > *{
+  color: var(--purple-dark);
+}
+
 
